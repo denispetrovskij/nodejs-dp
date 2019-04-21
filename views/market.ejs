@@ -1,0 +1,35 @@
+<% include ../partials/header %> 
+
+        
+
+
+            <div class="row">
+                <h1>Please complete the form to let your Villa</h1>
+            <div class="grid-container">
+                
+<% res1.forEach(function(contact) { %>
+                    
+                    <div class="item">
+                        <div class="item">
+                            <h1 class="itemp"><%= contact.Name %></h1>
+                            <h1 class="itemp"><%= contact.City %></h1>
+                            <img src="/<%= contact.Image %>" class="villaimage"></image>
+                        <h1 class="itemp">Price: <%= contact.Price %></h1>
+                        <h1 class="itemp">Description: <%= contact.Description %></h1> 
+                        
+            
+                        <a href="/book" class="button">Book Villa</a>
+                        <a href="/show2/<%= contact.Id %>" class="button">Show</a>   
+                        </div>
+                    </div>
+                   
+ <% }) %>
+              
+            </div>
+                
+                
+            </div>
+            
+            
+            
+<% include ../partials/footer %>

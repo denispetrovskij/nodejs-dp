@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+
+<div class="row">
+    
+    <div class="grid-container">
+        <% res.forEach(function(indOne) { %>
+        <form accept-charset="UTF-8" action="/editreview/<%= indOne.id %>" method="post">
+            <div class="item">
+                
+                <label for="name">Name</label>
+                <input name="name" type="text" value="<%= indOne.name %>">
+                
+                <label for="comment">Comment</label>
+                <input name="comment" type="text" value="<%= indOne.Comment %>">
+                
+                <label for="stars">Stars</label>
+                <input name="stars" type="text" value="<%= indOne.stars %>">
+                
+                <button class="button">Submit the change</button>
+                
+            </div>
+            
+            
+            
+            
+            
+        </form>
+        
+        <% }); %>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%include ../partials/footer %>

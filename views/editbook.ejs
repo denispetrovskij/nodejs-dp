@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div class="row">
+                <a href="/bookings" class="button">Back to all Villas</a>
+
+    <h1> Edit your booking</h1>
+    
+    <div class="grid-container">
+        
+        
+<% res1.forEach(function(product) { %>
+        <form accept-charset="UTF-8"  action="/book" method="post">
+            
+            <div class="item">
+                <label for="firstname">First Name:</label>
+                <input name="firstname" type="text" value="<%= product.Firstname %>", required />
+                
+                <label for="surname">Surname:</label>
+                <input name="surname" type="text" value="<%= product.Surname %>", required />
+                
+                <label for="price">Price:</label>
+                <input name="price" type="text" value="<%= product.Price %>", required />
+                
+                <label for="city">City:</label>
+                <input name="city" type="text" value="<%= product.City %>", required />
+                
+                <label for="datefrom">Dates From:</label>
+                <input name="datefrom" type="date" value="<%= product.Datefrom %>" , required />
+                
+                <label for="dateto">Dates To:</label>
+                <input name="dateto" type="date" value="<%= product.Dateto %>", required />
+                
+                <button class="button">Update Booking Details</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+<% }) %>       
+        
+    </div>

@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1>Welcome to the products page  <br>
+            <div class="grid-container">
+      
+      
+            <% contact.forEach(function(contact) { %>
+                <div class="item">     
+                    <div class="item">
+                       <h1 class="itemtitle">Id: <%= contact.id %> </h1>
+                       <h1 class="itemp">Name: <%= contact.name %> </h1>
+                       <h1 class="itemp">Name: <%= contact.stars %> </h1>
+                       <h1 class="itemp">Name: <%= contact.Comment %> </h1>
+                        <p class="itemp"></p>
+                    </div>
+              </div>
+              
+            <% }); %>
+           
+            </div>
+         </h1>
+    </div>
+        
+            
+            
+        
+        
+<% include ../partials/footer %>

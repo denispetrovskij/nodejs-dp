@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+   
+<div class="row">
+                <a href="/letvillas" class="button">Back to all Villas</a>
+<a href="/upload" class="button">upload image</a>
+    <h1> Let your Villa</h1>
+    
+    <div class="grid-container">
+        <form accept-charset="UTF-8" id="uploadForm" ref="uploadForm" action="/letvillasql" method="post" enctype="multipart/form-data">
+    
+    
+            
+            <div class="item">
+                
+                <label for="name">Name:</label>
+                <input name="name" type="text" placeholder="Please enter of the Villa", required />
+                
+                <label for="price">Price:</label>
+                <input name="price" type="number" placeholder="Please enter price", pattern="[0-9]", title='Only Numbers accepted', required />
+
+                <label for="city">City:</label>
+                <input name="city" type="text" placeholder="Please enter city", required />
+                
+                <label for="description">Description:</label>
+                <input name="description" type="text" placeholder="Please enter description", required />
+                
+                <label for="image">Image:</label>
+                <input class="button" type="file" name="sampleFile", required/>
+                
+                <button class="button">Add Villa</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+        
+        
+    </div>
+           
+            </div>
+
+        
+            
+            
+        
+        
+<% include ../partials/footer %>

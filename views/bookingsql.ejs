@@ -1,0 +1,37 @@
+<% include ../partials/header %> 
+
+        
+
+
+            <div class="row">
+                <h1>Villa Bookings</h1>
+            <div class="review-container-main">
+                
+<% res1.forEach(function(contact) { %>
+                    
+                    
+                <div class="review-container-2">  
+                            <h1 class="itemp">Booking Id: <%= contact.Id %></h1> 
+                            <h1 class="itemp">First Name: <%= contact.Firstname %></h1>
+                            <h1 class="itemp">Surname: <%= contact.Surname %></h1>
+                        <h1 class="itemp">Price: <%= contact.Price %></h1>
+                        <h1 class="itemp">City: <%= contact.City %></h1> 
+                        <h1 class="itemp">Date from: <%= contact.Datefrom %></h1> 
+                        <h1 class="itemp">Date to: <%= contact.Dateto %></h1> 
+                        
+            
+                        <a href="/editbook/<%= contact.Id %>" class="button">Edit</a>
+                        <a href="/deletebooksql/<%= contact.Id %>" class="button">Delete</a>
+                        </div>
+                    
+                   
+ <% }) %>
+              
+            </div>
+                
+                
+            </div>
+            
+            
+            
+<% include ../partials/footer %>

@@ -1,0 +1,52 @@
+<% include ../partials/header %>
+   
+<div class="row">
+    
+    <h1> Please review our Services</h1>
+    
+        <form accept-charset="UTF-8" action="/reviews" method="post">
+            
+            <div class="review-submit">
+                <label for="name">Name:</label>
+                <input name="name" type="text" placeholder="Please enter your name" />
+                <label for="comment">Comment:</label>
+                <input name="comment" type="text" placeholder="Please enter your comment" />
+                <label for="stars">Rate Our Services from 1 to 5</label>
+                <input name="stars" type="number" min="1" max="5" />
+                
+                <button class="button">Leave Comment</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+        
+        
+    </div>
+    
+      <div class="review-container-main">
+      
+      
+            <% contact.forEach(function(contact) { %>
+                <div class="review-container">  
+                    <h1 class="itemp">Stars: <%= contact.stars %> </h1>
+                       <h1 class="itemp">Name: <%= contact.name %> </h1>
+                       <h1 class="itemp">Comment: <%= contact.Comment %> </h1>
+<a href="/deletereview/<%= contact.id %>" class="button">Delete</a>
+<a href="/editreview/<%= contact.id %>" class="button">Edit</a>
+              </div>
+              
+            <% }); %>
+           
+            </div>
+    
+    
+</div>
+        
+            
+            
+        
+        
+<% include ../partials/footer %>

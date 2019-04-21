@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+   
+<div class="row">
+                <a href="/market" class="button">Back to all Villas</a>
+    <h1> book Villa</h1>
+    
+    <div class="grid-container">
+        <form accept-charset="UTF-8" action="/book" method="post">
+
+            <div class="item">
+                
+                <label for="firstname">First Name:</label>
+                <input name="firstname" type="text" placeholder="Please enter your First Name", required />
+                
+                <label for="surname">Surname:</label>
+                <input name="surname" type="text" placeholder="Please enter your Surname", required />
+                
+                <label for="price">Price:</label>
+                <input name="price" type="number" placeholder="Please enter Villa Proce", pattern="[0-9]", title='Only Numbers accepted', required />
+
+                <label for="city">City:</label>
+                <input name="city" type="text" placeholder="Please enter city", required />
+                
+                <label for="datefrom">Dates From:</label>
+                <input name="datefrom" type="date" placeholder="Please enter date from", required />
+                
+                <label for="dateto">Dates To:</label>
+                <input name="dateto" type="date" placeholder="Please enter date to", required />
+                
+                <button class="button">Book Villa</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+        
+        
+    </div>
+           
+            </div>
+
+        
+            
+            
+        
+        
+<% include ../partials/footer %>

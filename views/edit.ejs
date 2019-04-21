@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+<div class="row">
+                <a href="/letvillas" class="button">Back to all Villas</a>
+
+    <h1> Edit your Villa</h1>
+    
+    <div class="grid-container">
+        
+        
+<% res1.forEach(function(product) { %>
+        <form accept-charset="UTF-8" id="uploadForm" ref="uploadForm" action="/letvillasql" method="post" enctype="multipart/form-data">
+            
+            <div class="item">
+                <label for="name">Name:</label>
+                <input name="name" type="text" value="<%= product.Name %>" />
+                <label for="price">Price:</label>
+                <input name="price" type="text" value="<%= product.Price %>" />
+                
+<label for="image">Image:</label>
+                <input class="button" type="file" name="sampleFile"/>
+                <label for="city">City:</label>
+                <input name="city" type="text" value="<%= product.City %>" />
+                <label for="description">Description:</label>
+                <input name="description" type="text" value="<%= product.Description %>" />
+                
+                <button class="button">Update Villa Details</button>
+                
+            </div>
+            
+            
+            
+            
+        </form>
+<% }) %>       
+        
+    </div>
+           
+            </div>
+
+
+<% include ../partials/footer %>

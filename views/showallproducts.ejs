@@ -1,0 +1,47 @@
+<% include ../partials/header %> 
+
+<script>
+    $(document).ready(function() {
+    $("#show-description").click(function() {
+    $("#itemd").slideDown(1000).delay(2000).slideUp(1000);
+    })
+    });
+</script>
+
+
+            <div class="row">
+                <h1>Please complete the form to let your Villa</h1>
+            <a href="/letvillasql" class="button">Add your Villa</a>
+            <div class="grid-container">
+                
+<% res1.forEach(function(contact) { %>
+                    
+                    <div class="item">
+                        <div class="item">
+                            <h1 class="itemp"><%= contact.Name %></h1>
+                            <h1 class="itemp"><%= contact.City %></h1>
+                            <img src="/<%= contact.Image %>" class="villaimage"></image>
+                        <h1 class="itemp">Price: <%= contact.Price %></h1>
+                        <button id="show-description">Click to see details</button>
+                        <p id="itemd"><%= contact.Description %></p> 
+                        
+            
+                        <a href="/edit/<%= contact.Id %>" class="button">Edit</a>
+                        <a href="/deletesql/<%= contact.Id %>" class="button">Delete</a>
+                        <a href="/show/<%= contact.Id %>" class="button">Show</a>   
+                        </div>
+                    </div>
+                   
+ <% }) %>
+ 
+ 
+
+              
+            </div>
+                
+                
+            </div>
+            
+            
+            
+<% include ../partials/footer %>
